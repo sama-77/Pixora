@@ -85,12 +85,7 @@ header nav .header-ul,
   color: #f88ea4;
   font-size: 25px;
 }
-.pin:hover
-{
-  -webkit-text-stroke: 2px #f88ea4;
-  color: white !important;
-  font-size: 28px;
-}
+
 .header-ul .header-li
 {
     width: 20%;
@@ -226,7 +221,6 @@ header nav
 .active
 {
     color:#f88ea4;
-    -webkit-text-stroke: 2px #f88ea4;
 }
 .dark-mode
 {
@@ -396,4 +390,14 @@ header nav
 }
 
 
+/*handling hover*/
+@media(hover:hover)
+{
+.pin:hover
+{
+  -webkit-text-stroke: 2px #f88ea4;
+  color: #f88ea4 !important;
+  font-size: 28px;
+}
+}
 

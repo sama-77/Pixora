@@ -160,6 +160,16 @@ function displayImg(data,columns,selectedImg)
 
   let isliked=false;
 
+  
+        let id=data[i].id;
+        for(let i=0 ;i<favImageList.length;i++)
+        {
+          if(id == favImageList[i].id )
+          {
+            favIcon.style.color="red";
+          }
+        }
+
   favIcon.addEventListener("click" , function(){
 
     isliked=!isliked;
@@ -170,6 +180,7 @@ function displayImg(data,columns,selectedImg)
     localStorage.setItem("favImgs",JSON.stringify(favImageList));
         favMsg.textContent = "Liked ❤️!";
         favMsg.style.display = "block";
+
     }
     else
     {
@@ -195,6 +206,8 @@ function displayImg(data,columns,selectedImg)
 
     
   });
+
+
 
   favIcon.addEventListener("mouseover", function(){
     if(isliked) favMsg.style.display="block";
